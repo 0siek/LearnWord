@@ -1,0 +1,527 @@
+/* Ogólne ustawienia strony */
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #121212;
+  color: #e0e0e0;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  height: 100vh; /* Wysokość całej strony na 100% widocznego obszaru */
+  margin: auto; /* Usunięcie domyślnych marginesów */
+  display: flex; /* Użycie flexboxa do centrowania */
+  justify-content: center; /* Wyśrodkowanie poziome */
+  align-items: center; /* Wyśrodkowanie pionowe */
+  background-color: #121212;
+  max-width: 1200px; /* Maksymalna szerokość kontenera */
+  padding: 20px; /* Dodanie wewnętrznego odstępu */
+}
+.login-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+
+/* Styl dla całego kontenera menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #1b1b1a;
+  align-items: center;
+  border: 2px solid #1b1b1a;
+  padding: 30px;
+  gap: 10px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Styl dla linków w menu (usunięcie domyślnych stylów linków) */
+.menu-button {
+  margin: 0; /* Usunięcie domyślnych marginesów */
+  width: 100%; /* Przyciski zajmują pełną szerokość menu */
+}
+
+.menu-button button {
+  width: 100%; /* Przyciski zajmują pełną szerokość dostępnego obszaru */
+}
+
+/* Styl dla przycisków */
+.menu button {
+  padding: 15px; /* Zmniejszenie paddingu dla lepszej czytelności */
+  font-size: 18px; /* Zmniejszenie rozmiaru czcionki */
+  cursor: pointer; /* Zmiana kursora na rękę po najechaniu */
+  background-color: #1e88e5; /* Kolor tła przycisku */
+  transition: background-color 0.3s; /* Płynna zmiana koloru tła */
+  border: none; /* Usunięcie obramowania */
+  border-radius: 5px; /* Zaokrąglenie rogów */
+}
+.usun-button {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  align-items: center;
+  background: none !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.tabele {
+  margin-top: 70px;
+}
+
+.menu button:hover {
+  background-color: #1565c0; /* Jaśniejszy kolor tła przy najechaniu */
+}
+
+.usun {
+  background: none;
+  box-shadow: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wybieranie_tabeli {
+  background: none;
+  border: none;
+  border-radius: none;
+}
+
+.dodawanieslowek {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}
+
+.test-form {
+  width: 100%;
+  max-width: 600px; /* Maksymalna szerokość formularza */
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.form-login {
+  padding: 60px;
+}
+
+.feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.hint {
+  color: green;
+  text-align: center;
+}
+
+.error {
+  color: red;
+}
+
+.wynik {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #1b1b1a;
+  background: #1b1b1a;
+  width: 100%;
+  max-width: 800px; /* Maksymalna szerokość wyników */
+  padding: 30px; /* Zmniejszenie paddingu */
+  border-radius: 10px;
+  margin: 20px auto; /* Dodanie marginesu góra-dół i wyśrodkowanie */
+}
+
+.restart {
+  box-shadow: none;
+  background: none;
+}
+
+.addWord {
+  padding: 20px; /* Zmniejszenie paddingu */
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px; /* Zmniejszenie rozmiaru czcionki */
+}
+
+/* Przyciski */
+button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #1565c0;
+}
+
+/* Dodatkowe style dla przycisku ukrywania */
+#toggle-button {
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  margin: 10px;
+}
+
+#toggle-button:hover {
+  background-color: #1565c0;
+}
+
+/* Pozycjonowanie przycisku w lewym górnym rogu */
+.header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 100%;
+}
+
+/* Lista pod przyciskiem */
+.list {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+}
+
+.left,
+.right {
+  width: 48%;
+}
+
+.right {
+  transition: width 0.3s ease, margin 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 300px;
+}
+
+/* Styl dla tabel */
+table {
+  width: 100%; /* Ustawienie szerokości na 100% */
+  border-collapse: collapse;
+  margin: 10px auto;
+  border: 1px solid #333;
+  background-color: #1e1e1e;
+}
+
+.id-column {
+  width: auto;
+}
+
+th,
+td {
+  padding: 12px;
+  border: 1px solid #333;
+  text-align: center;
+}
+
+th {
+  background-color: #1e88e5;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #2c2c2c;
+}
+
+/* Formularze */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  background: #1e1e1e;
+  padding: 20px; /* Zmniejszenie paddingu */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  align-items: center;
+}
+
+.formularz_dodawania {
+  padding: 20px; /* Zmniejszenie paddingu */
+}
+
+textarea,
+label,
+input[type="text"],
+input[type="password"] {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #e0e0e0;
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%; /* Ustawienie szerokości na 100% */
+  max-width: 300px; /* Maksymalna szerokość */
+}
+
+label {
+  font-size: 20px; /* Zmniejszenie rozmiaru czcionki */
+  font-weight: bold;
+}
+
+select {
+  padding: 8px;
+  width: 100%;
+  max-width: 100px;
+  margin: 10px 0;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+input[type="submit"] {
+  background-color: #43a047;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #388e3c;
+}
+
+.message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #43a047;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.error_message {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #c73737;
+  color: white;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.message.error {
+  background-color: #e53935;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #1b1b1a;
+  margin: 10% auto; /* Zmniejszenie marginesu góra-dół */
+  padding: 20px;
+  border: 1px solid #1b1b1a;
+  width: 80%;
+  max-width: 400px; /* Zmniejszenie maksymalnej szerokości dla mniejszych ekranów */
+  border-radius: 10px;
+}
+
+.modal-button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.modal-button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px; /* Zmniejszenie rozmiaru czcionki */
+}
+
+.cancel-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.ok-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.bi {
+  font-size: 20px;
+  margin-left: 20px;
+}
+.learn-sound {
+  font-size: 30px;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+/* Media queries dla urządzeń mobilnych */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .menu {
+    padding: 20px;
+    width: 70%;
+  }
+
+  .menu button {
+    width: 100%; /* Przyciski zajmują pełną szerokość */
+    padding: 12px;
+    font-size: 18px;
+  }
+
+  .test-form {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  table {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+
+  select,
+  textarea,
+  input[type="text"] {
+    max-width: 100%;
+  }
+  input[type="password"] {
+    max-width: 100%;
+  }
+
+  #toggle-button,
+  button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .message {
+    font-size: 14px;
+  }
+
+  .wynik {
+    max-width: 90%;
+    padding: 20px;
+    min-width: 200px;
+  }
+  .list {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  h1,
+  h2 {
+    font-size: 20px;
+  }
+
+  .test-form {
+    padding: 10px;
+  }
+
+  #toggle-button,
+  button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  select,
+  textarea,
+  input[type="text"] {
+    padding: 6px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th,
+  td {
+    padding: 6px;
+  }
+
+  .addWord {
+    padding: 0px;
+  }
+
+  .menu button {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .modal-content {
+    width: 90%;
+    max-width: 300px; /* Dostosowanie szerokości modalu */
+    margin: 20% auto;
+  }
+
+  .modal-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .wynik {
+    padding: 15px;
+    max-width: 100%;
+    min-width: 150px;
+  }
+}
